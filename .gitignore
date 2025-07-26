@@ -8,8 +8,14 @@
 
 !.config/
 
+!.config/dolphinrc
+
 !.config/hypr/
 !.config/hypr/**
+.config/hypr/curr-wp.jpg
+
+!.config/kitty/
+!.config/kitty/**
 
 !.config/rofi/
 !.config/rofi/launchers/
@@ -17,12 +23,6 @@
 !.config/rofi/launchers/type-4/style-4.rasi
 !.config/rofi/launchers/type-4/launcher.sh
 
-!.config/dolphinrc
-
-!.config/kitty/
-!.config/kitty/**
-
 !.config/waybar/
 !.config/waybar/**
 
-.config/hypr/curr-wp.jpg

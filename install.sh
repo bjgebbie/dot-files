@@ -22,7 +22,8 @@ if [[ $input == *1* ]]; then
 
     curl -fsSL https://sourceforge.net/projects/zsh/files/zsh/5.9/zsh-5.9.tar.xz/download -o zsh-5.9.tar.xz
     tar -xf zsh-5.9.tar.xz
-    ./zsh-5.9/configure
+    cd zsh-5.9
+    ./configure
     make
     make install
     zsh --version

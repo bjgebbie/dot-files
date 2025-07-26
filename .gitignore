@@ -22,4 +22,7 @@
 !.config/kitty/
 !.config/kitty/**
 
+!.config/waybar/
+!.config/waybar/**
+
 .config/hypr/curr-wp.jpg

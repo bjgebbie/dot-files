@@ -1,0 +1,21 @@
+*
+
+!.zshrc
+!.bashrc
+!.p10k.zsh
+!.config/
+!.config/hypr/
+!.config/hypr/**
+!README.md
+!.gitignore 
+
+.config/hypr/curr-wp.jpg
+
+
+
+
+
+
+# !.config/rofi/launchers/type-4/style-4.rasi
+# !.config/rofi/launchers/type-4/launcher.sh
+

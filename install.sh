@@ -16,13 +16,13 @@ if [[ $input == *0* ]]; then
 fi
 
 if [[ $input == *1* ]]; then
+    cd $HOME
     echo "Installing zshrc..."
     sleep 2
 
     curl -fsSL https://sourceforge.net/projects/zsh/files/zsh/5.9/zsh-5.9.tar.xz/download -o zsh-5.9.tar.xz
     tar -xf zsh-5.9.tar.xz
-    cd zsh-5.9
-    .configure
+    ./zsh-5.9/configure
     make
     make install
     zsh --version

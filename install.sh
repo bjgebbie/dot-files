@@ -15,6 +15,7 @@ if [[ $input == *0* ]]; then
 fi
 
 if [[ $input == *1* ]]; then
+    # this needs git, xz-utils, curl, and gcc
     cd $HOME
     echo "Installing zshrc..."
     sleep 2
@@ -29,7 +30,7 @@ if [[ $input == *1* ]]; then
     zsh --version
 
     cd $HOME
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    RUNZSH=no CHSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
     curl -O https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.zshrc
     curl -O https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.p10k.zsh

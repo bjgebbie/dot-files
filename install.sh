@@ -35,7 +35,8 @@ if [[ $input == *1* ]]; then
     curl -O https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.zshrc
     curl -O https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.p10k.zsh
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
+    ~/.fzf/install --all --no-update-rc
+    omz reload
 fi
 
 if [[ $input == *2* ]]; then

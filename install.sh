@@ -10,6 +10,7 @@ echo "5) waybar"
 echo -n "Enter number(s): "
 read -r input
 
+git clone git@github.com:bjgebbie/dot-files.git $HOME
 
 if [[ $input == *0* ]]; then
     echo "al"
@@ -27,6 +28,8 @@ if [[ $input == *1* ]]; then
     make
     make install
     zsh --version
+
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 if [[ $input == *2* ]]; then

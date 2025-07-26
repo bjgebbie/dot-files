@@ -10,8 +10,6 @@ echo "5) waybar"
 echo -n "Enter number(s): "
 read -r input
 
-git clone git@github.com:bjgebbie/dot-files.git $HOME/.
-
 if [[ $input == *0* ]]; then
     echo "al"
 fi
@@ -23,13 +21,18 @@ if [[ $input == *1* ]]; then
 
     curl -fsSL https://sourceforge.net/projects/zsh/files/zsh/5.9/zsh-5.9.tar.xz/download -o zsh-5.9.tar.xz
     tar -xf zsh-5.9.tar.xz
+
     cd zsh-5.9
     ./configure
     make
     make install
     zsh --version
 
+    cd $HOME
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+    curl -O https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.zshrc
+    curl -O https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.p10k.zsh
 fi
 
 if [[ $input == *2* ]]; then

@@ -17,6 +17,8 @@
 !.config/rofi/launchers/type-4/style-4.rasi
 !.config/rofi/launchers/type-4/launcher.sh
 
+!.config/dolphinrc
+
 .config/hypr/curr-wp.jpg
 
 

@@ -19,6 +19,7 @@
 
 !.config/dolphinrc
 
+!.config/kitty/
+!.config/kitty/**
+
 .config/hypr/curr-wp.jpg
-
-

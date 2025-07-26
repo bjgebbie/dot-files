@@ -1,22 +1,31 @@
 #!/bin/bash
 
 echo "Choose Options"
-echo "0: all"
-echo "1: zshrc"
-echo "2: dolphinrc"
-echo "3: hypr"
-echo "4: kitty"
-echo "5: waybar"
+echo "0) all"
+echo "1) zshrc"
+echo "2) dolphinrc"
+echo "3) hypr"
+echo "4) kitty"
+echo "5) waybar"
 echo -n "Enter number(s): "
 read -r input
 
 
 if [[ $input == *0* ]]; then
-    echo "Running flow 0..."
+    echo "al"
 fi
 
 if [[ $input == *1* ]]; then
-    echo "Running flow 1..."
+    echo "Installing zshrc..."
+    sleep 2
+
+    curl -fsSL https://sourceforge.net/projects/zsh/files/zsh/5.9/zsh-5.9.tar.xz/download -o zsh-5.9.tar.xz
+    tar -xf zsh-5.9.tar.xz
+    cd zsh-5.9
+    .configure
+    make
+    make install
+    zsh --version
 fi
 
 if [[ $input == *2* ]]; then

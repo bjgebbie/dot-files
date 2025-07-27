@@ -11,14 +11,13 @@ echo -n "Enter number(s): "
 read -r input
 #!/bin/bash
 
-# Progress bar function
 show_progress() {
     local spin='-\|/'
     local i=0
 
     while kill -0 "$1" 2>/dev/null; do
         i=$(( (i+1) %4 ))
-        printf "\r[%c] Working..." "${spin:$i:1}"
+        printf "\r[%c] Installing..." "${spin:$i:1}"
         sleep 0.1
     done
     printf "\r[✓] Done!        \n"
@@ -55,7 +54,7 @@ if [[ $input == *0* ]]; then
 fi
 
 if [[ $input == *1* ]]; then
-    $(install_zsh_config > /dev/null)&
+    $(install_zsh_config > /dev/null 2>&1)&
     show_progress $!
 fi
 

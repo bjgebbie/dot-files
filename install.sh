@@ -56,6 +56,7 @@ fi
 if [[ $input == *1* ]]; then
     (install_zsh_config > /dev/null 2>&1 </dev/null)&
     show_progress $!
+    fg $!
 fi
 
 if [[ $input == *2* ]]; then

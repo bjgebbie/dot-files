@@ -1,6 +1,9 @@
 *
 
-!install.sh
+!bootstrap.sh
+!install/
+!install/**
+
 !README.md
 !.bashrc
 !.gitignore 

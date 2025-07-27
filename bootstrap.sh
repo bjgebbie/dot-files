@@ -27,7 +27,7 @@ if [[ $input == *0* ]]; then
 fi
 
 if [[ $input == *1* ]]; then
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/install/zsh.sh)"
+    bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/install/zsh.sh)
 fi
 
 if [[ $input == *2* ]]; then

@@ -19,7 +19,7 @@ if [[ $input == *1* ]]; then
 fi
 
 if [[ $input == *2* ]]; then
-    echo "Running flow 2..."
+    bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/install/kitty.sh)
 fi
 
 if [[ $input == *3* ]]; then

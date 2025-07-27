@@ -3,7 +3,7 @@ All me dot files
 
 ## Install
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/bootstrap.sh)
 ```
 ## Testing with Docker
 ```bash

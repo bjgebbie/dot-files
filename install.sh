@@ -10,7 +10,7 @@ echo "5) waybar"
 echo -n "Enter number(s): "
 read -r input
 
-install_zsh_config() {
+install_zsh_config () {
     # this needs git, xz-utils, curl, and gcc
     cd $HOME
     echo "Installing zshrc..."

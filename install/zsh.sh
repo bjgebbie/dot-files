@@ -1,5 +1,17 @@
 #!/bin/bash
 
+show_progress() {
+    local spin='-\|/'
+    local i=0
+
+    while kill -0 "$1" 2>/dev/null; do
+        i=$(( (i+1) %4 ))
+        printf "\r[%c] Installing..." "${spin:$i:1}"
+        sleep 0.1
+    done
+    printf "\r[✓] Done!        \n"
+}
+
 install_zsh_config () {
     # this needs git, xz-utils, curl, and gcc
     cd $HOME
@@ -21,3 +33,8 @@ install_zsh_config () {
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install --all --no-update-rc
 }
+
+install_zsh_config > /dev/null 2>&1 </dev/null &
+show_progress $!
+echo "Launching zsh!"
+zsh

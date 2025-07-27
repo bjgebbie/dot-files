@@ -9,6 +9,21 @@ echo "4) kitty"
 echo "5) waybar"
 echo -n "Enter number(s): "
 read -r input
+#!/bin/bash
+
+# Progress bar function
+show_progress() {
+    local spin='-\|/'
+    local i=0
+
+    while kill -0 "$1" 2>/dev/null; do
+        i=$(( (i+1) %4 ))
+        printf "\r[%c] Working..." "${spin:$i:1}"
+        sleep 0.1
+    done
+    printf "\r[✓] Done!        \n"
+}
+
 
 install_zsh_config () {
     # this needs git, xz-utils, curl, and gcc
@@ -40,26 +55,8 @@ if [[ $input == *0* ]]; then
 fi
 
 if [[ $input == *1* ]]; then
-    # Define the total number of steps for the progress bar
-    TOTAL_STEPS=50
-
-    # Define the character to represent progress
-    PROGRESS_CHAR="#"
-
-    # Loop through the steps
-    for i in $(seq 1 $TOTAL_STEPS); do
-        # Calculate the percentage
-        PERCENT=$(( (i * 100) / TOTAL_STEPS ))
-
-        # Create the progress bar string
-        BAR=$(printf "%${i}s" | tr ' ' "$PROGRESS_CHAR")
-        EMPTY_BAR=$(printf "%$((TOTAL_STEPS - i))s" | tr ' ' "-")
-
-        # Print the progress bar and percentage, overwriting the current line
-        echo -ne "\r[${BAR}${EMPTY_BAR}] ${PERCENT}%"
-
-        install_zsh_config > /dev/null
-    done
+    $(install_zsh_config > /dev/null)&
+    show_progress $!
 fi
 
 if [[ $input == *2* ]]; then

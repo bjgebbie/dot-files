@@ -6,10 +6,10 @@ show_progress() {
 
     while kill -0 "$1" 2>/dev/null; do
         i=$(( (i+1) %4 ))
-        printf "\r[%c] Installing..." "${spin:$i:1}"
+        printf "\r[%c] Installing ZSH" "${spin:$i:1}"
         sleep 0.1
     done
-    printf "\r[✓] Done!        \n"
+    printf "\r[✓] ZSH Done!        \n"
 }
 
 install_zsh_config () {

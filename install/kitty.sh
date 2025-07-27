@@ -13,7 +13,7 @@ show_progress() {
 }
 
 install_kitty_config () {
-    if command -v kitty; then
+    if command -v kitty >/dev/null 2>&1; then
         curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
     fi;
     mkdir -p .config/kitty/

@@ -40,12 +40,12 @@ install_zsh_config () {
     zsh --version
 
     cd $HOME
-    RUNZSH=no CHSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
-    curl -O https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.zshrc
-    curl -O https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.p10k.zsh
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install --all --no-update-rc
+    RUNZSH=no CHSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" > /dev/null
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" > /dev/null
+    curl -O https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.zshrc > /dev/null
+    curl -O https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.p10k.zsh > /dev/null
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf > /dev/null
+    ~/.fzf/install --all --no-update-rc > /dev/null
     zsh
 }
 
@@ -55,8 +55,7 @@ fi
 
 if [[ $input == *1* ]]; then
     install_zsh_config &
-    pid=$!
-    show_progress $pid
+    show_progress $!
     fg %1
 fi
 

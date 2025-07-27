@@ -54,7 +54,7 @@ if [[ $input == *0* ]]; then
 fi
 
 if [[ $input == *1* ]]; then
-    $(install_zsh_config > /dev/null 2>&1)&
+    (install_zsh_config > /dev/null 2>&1 </dev/null)&
     show_progress $!
 fi
 

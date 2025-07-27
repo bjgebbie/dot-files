@@ -3,9 +3,9 @@
 echo "Choose Options"
 echo "0) all"
 echo "1) zshrc"
-echo "2) dolphinrc"
+echo "2) kitty"
 echo "3) hypr"
-echo "4) kitty"
+echo "4) dolphinrc"
 echo "5) waybar"
 echo -n "Enter number(s): "
 read -r input

@@ -7,11 +7,13 @@ echo "2) kitty"
 echo "3) hypr"
 echo "4) dolphinrc"
 echo "5) waybar"
+echo ""
 echo -n "Enter number(s): "
 read -r input
 
 if [[ $input == *0* ]]; then
-    echo "al"
+    bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/install/zsh.sh)
+    bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/install/kitty.sh)
 fi
 
 if [[ $input == *1* ]]; then
@@ -32,4 +34,8 @@ fi
 
 if [[ $input == *5* ]]; then
     echo "Running flow 5..."
+fi
+
+if [[ $input == *6* ]]; then
+    echo "Running flow 6..."
 fi

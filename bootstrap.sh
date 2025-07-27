@@ -27,7 +27,7 @@ if [[ $input == *0* ]]; then
 fi
 
 if [[ $input == *1* ]]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/install/zsh.sh)"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/install/zsh.sh)"
 fi
 
 if [[ $input == *2* ]]; then
@@ -45,6 +45,3 @@ fi
 if [[ $input == *5* ]]; then
     echo "Running flow 5..."
 fi
-
-
-

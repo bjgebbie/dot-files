@@ -44,7 +44,6 @@ install_zsh_config () {
     curl -O https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.p10k.zsh
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install --all --no-update-rc
-    zsh
 }
 
 if [[ $input == *0* ]]; then
@@ -52,9 +51,9 @@ if [[ $input == *0* ]]; then
 fi
 
 if [[ $input == *1* ]]; then
-    install_zsh_config &
+    install_zsh_config > /dev/null 2>&1 </dev/null &
     show_progress $!
-    fg %1
+    zsh
 fi
 
 if [[ $input == *2* ]]; then

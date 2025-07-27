@@ -30,13 +30,13 @@ install_zsh_config () {
     echo "Installing zshrc..."
     sleep 1
 
-    curl -fsSL https://sourceforge.net/projects/zsh/files/zsh/5.9/zsh-5.9.tar.xz/download -o zsh-5.9.tar.xz
-    tar -xf zsh-5.9.tar.xz
+    curl -fsSL https://sourceforge.net/projects/zsh/files/zsh/5.9/zsh-5.9.tar.xz/download -o zsh-5.9.tar.xz > /dev/null
+    tar -xf zsh-5.9.tar.xz > /dev/null
 
     cd zsh-5.9
-    ./configure
-    make
-    make install
+    ./configure  > /dev/null
+    make > /dev/null
+    make install > /dev/null
     zsh --version
 
     cd $HOME

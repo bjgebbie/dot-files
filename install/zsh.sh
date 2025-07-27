@@ -28,9 +28,9 @@ install_zsh_config () {
     cd $HOME
     RUNZSH=no CHSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" 
-    curl -o https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.zshrc ~/.zshrc
-    curl -o https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.p10k.zsh ~/.p10k.zsh
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    curl -o https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.zshrc "$HOME/.zshrc"
+    curl -o https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.p10k.zsh "$HOME/.p10k.zsh"
+    git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME/.fzf"
     ~/.fzf/install --all --no-update-rc
 }
 

@@ -23,7 +23,6 @@ show_progress() {
     printf "\r[✓] Done!        \n"
 }
 
-
 install_zsh_config () {
     # this needs git, xz-utils, curl, and gcc
     cd $HOME
@@ -53,6 +52,7 @@ fi
 if [[ $input == *1* ]]; then
     install_zsh_config > /dev/null 2>&1 </dev/null &
     show_progress $!
+    echo "Launching zsh!"
     zsh
 fi
 

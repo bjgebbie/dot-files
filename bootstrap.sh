@@ -7,7 +7,7 @@ echo "2) kitty"
 echo "3) hypr"
 echo "4) dolphinrc"
 echo "5) waybar"
-echo ""
+echo "6) nvim"
 echo -n "Enter number(s): "
 read -r input
 
@@ -37,5 +37,5 @@ if [[ $input == *5* ]]; then
 fi
 
 if [[ $input == *6* ]]; then
-    echo "Running flow 6..."
+    bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/install/nvim.sh)
 fi

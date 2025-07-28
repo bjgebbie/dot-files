@@ -10,12 +10,7 @@ RUN apt-get update && \
         build-essential \ 
         libncurses-dev
         
-# RUN useradd -m -s /bin/ myuser && \
-#     passwd -d myuser && \
-#     usermod -aG sudo myuser
-#
-# USER myuser
-
 COPY ./install/nvim.sh /root/nvim.sh
   
-CMD  -c "bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/bootstrap.sh)"
+CMD ["bash", "-c", "curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/bootstrap.sh | bash"]
+

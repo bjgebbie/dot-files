@@ -25,7 +25,15 @@ install_nvim_config () {
             darwin) echo apple;;
         esac
     fi
-    curl
+    # Node deps for LSPs
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    export NVM_DIR="$HOME/.nvm"
+    source "$NVM_DIR/nvm.sh"
+    nvm install --lts
+
+    mkdir ~/.config/nvim
+    curl https://github.com/bjgebbie/dot-files/raw/refs/heads/master/nvim.tar.gz -o ~/.config/nvim/nvim.tar.gz
+    tar -xzf ~/.config/nvim/nvim.tar -C ~/.config/nvim
 }
 
 install_nvim_config

@@ -25,6 +25,7 @@ install_nvim_config () {
             darwin) echo apple;;
         esac
     fi
+    curl
 }
 
 install_nvim_config

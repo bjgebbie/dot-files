@@ -17,6 +17,5 @@ RUN apt-get update && \
 # USER myuser
 
 COPY ./install/nvim.sh /root/nvim.sh
-RUN /root/nvim.sh
   
 CMD  -c "bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/bootstrap.sh)"

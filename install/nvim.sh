@@ -26,14 +26,14 @@ install_nvim_config () {
         esac
     fi
     # Node deps for LSPs
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
     export NVM_DIR="$HOME/.nvm"
-    source "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
     nvm install --lts
 
-    mkdir ~/.config/nvim
+    mkdir -p ~/.config/nvim
     curl https://github.com/bjgebbie/dot-files/raw/refs/heads/master/nvim.tar.gz -o ~/.config/nvim/nvim.tar.gz
-    tar -xzf ~/.config/nvim/nvim.tar -C ~/.config/nvim
+    tar -xzf ~/.config/nvim/nvim.tar.gz -C ~/.config/nvim
 }
 
 install_nvim_config

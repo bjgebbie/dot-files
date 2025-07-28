@@ -18,7 +18,7 @@ install_nvim_config () {
         case "$OS" in
             linux) 
                 curl -L https://github.com/neovim/neovim/releases/download/v0.11.3/nvim-linux-x86_64.tar.gz -o /usr/local/nvim-linux-x86_64.tar.gz
-                tar xzf /usr/local/nvim-linux-x86_64.tar.gz -C /usr/local
+                tar -xzf /usr/local/nvim-linux-x86_64.tar.gz -C /usr/local
                 sudo ln -s /usr/local/nvim-linux-x86_64/bin/nvim /usr/local/bin/nvim
                 nvim --version
             ;;
@@ -26,14 +26,16 @@ install_nvim_config () {
         esac
     fi
     # Node deps for LSPs
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    nvm install --lts
+    # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+    # export NVM_DIR="$HOME/.nvm"
+    # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    # nvm install --lts
 
+    mkdir ~/temp
     mkdir -p ~/.config/nvim
-    curl https://github.com/bjgebbie/dot-files/raw/refs/heads/master/nvim.tar.gz -o ~/.config/nvim/nvim.tar.gz
-    tar -xzf ~/.config/nvim/nvim.tar.gz -C ~/.config/nvim
+    git clone https://github.com/bjgebbie/dot-files.git ~/temp
+
+    cp -r ~/temp/.config/nvim/. ~/.config/nvim/
 }
 
 install_nvim_config

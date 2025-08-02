@@ -8,6 +8,7 @@ RUN apt-get update && \
         sudo \
         xz-utils \
         build-essential \ 
+        unzip \ 
         libncurses-dev
         
 COPY ./install/nvim.sh /root/nvim.sh

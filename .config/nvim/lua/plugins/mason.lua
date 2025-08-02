@@ -10,8 +10,7 @@ return {
     {
         "williamboman/mason-lspconfig.nvim",
         version = "^2.0.0",
-        lazy = true,
-        event = "BufReadPre",
+        lazy = false,
         dependencies = {
             "williamboman/mason-lspconfig.nvim",
             "hrsh7th/cmp-nvim-lsp", -- optional, for autocompletion
@@ -92,7 +91,7 @@ return {
     {
         -- Items that are found in :Mason Linters or formatters
         "jay-babu/mason-null-ls.nvim",
-        event = { "BufReadPre", "BufNewFile" },
+        lazy = false,
         dependencies = {
             "williamboman/mason.nvim",
             "nvimtools/none-ls.nvim",

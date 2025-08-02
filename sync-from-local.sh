@@ -6,6 +6,8 @@ cp -r ~/.config/rofi/launchers/type-5/launcher.sh ./.config/rofi/
 cp -r ~/.config/kitty/ ./.config/
 cp -r ~/.config/waybar/ ./.config/
 cp -r ~/.config/dolphinrc ./.config/dolphinrc
+
+rm -rf ~/git/dot-files/.config/nvim
 cp -r ~/.config/nvim/ ./.config/
 
 cp -r ~/.bashrc ./.bashrc

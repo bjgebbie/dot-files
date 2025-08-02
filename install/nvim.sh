@@ -60,9 +60,9 @@ install_nvim_config () {
     fi
 
     # NeoVim config deps
-    install_lua
+    install_lua > /dev/null
     install_rip_grep > /dev/null
-    install_node 
+    install_node > /dev/null
 
     mkdir ~/temp
     mkdir -p ~/.config/nvim

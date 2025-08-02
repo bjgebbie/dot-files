@@ -45,7 +45,7 @@ install_rip_grep () {
     rg --version
 }
 
-install_nvim_config () {
+determine_platform () {
     if ! command -v nvim; then
         OS=$(uname -s | tr '[:upper:]' '[:lower:]')
         case "$OS" in
@@ -58,11 +58,15 @@ install_nvim_config () {
             darwin) brew install neovim;;
         esac
     fi
+}
 
+install_nvim_config () {
+    determine_platform
     # NeoVim config deps
-    install_lua > /dev/null
-    install_rip_grep > /dev/null
-    install_node > /dev/null
+    install_lua
+    install_rip_grep
+    install_node
+    install_node
 
     mkdir ~/temp
     mkdir -p ~/.config/nvim

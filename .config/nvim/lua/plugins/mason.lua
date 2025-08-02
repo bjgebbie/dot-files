@@ -21,10 +21,16 @@ return {
 
             mason_lspconfig.setup({
                 ensure_installed = {
-                    "lua_ls",
+                    "terraformls",
+                    "dockerls",
                     "bashls",
-                }, -- add more as needed
-                automatic_installation = true,
+                    "clangd",
+                    "eslint",
+                    "lua_ls",
+                    "yamlls",
+                    "ts_ls",
+                },
+                -- automatic_installation = true,
             })
 
             -- mason_lspconfig.setup_handlers({

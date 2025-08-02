@@ -45,5 +45,3 @@ install_zsh_config () {
 
 install_zsh_config > /dev/null 2>&1 </dev/null &
 show_progress $!
-echo "Launching zsh!"
-zsh

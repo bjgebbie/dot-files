@@ -31,7 +31,7 @@ return {
                     "yamlls",
                     "ts_ls",
                 },
-                -- automatic_installation = true,
+                automatic_installation = true,
             })
 
             -- mason_lspconfig.setup_handlers({

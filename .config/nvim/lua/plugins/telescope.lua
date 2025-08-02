@@ -2,6 +2,7 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",
+		lazy = false,
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			local builtin = require("telescope.builtin")
@@ -13,7 +14,7 @@ return {
 	},
 	{
 		"nvim-telescope/telescope-ui-select.nvim",
-		event = "BufRead",
+		lazy = false,
 		config = function()
 			local telescope = require("telescope")
 

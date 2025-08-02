@@ -1,38 +1,37 @@
 * {
-    /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
-    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    transition: background-color .3s ease-out;
+  /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
+  font-family:
+    "Hack Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s ease-out;
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0.0);
-    color: #c0caf5;
-    font-family: 
-        SpaceMono Nerd Font,
-        feather;
-    transition: background-color .5s;
+  background: rgba(0, 0, 0, 0);
+  color: #c0caf5;
+  font-family:
+    SpaceMono Nerd Font,
+    feather;
+  transition: background-color 0.5s;
 }
 
-.modules-right
-{
-    background: rgba(0, 0, 0, .65);
-    margin: 5px 5px;
-    padding: 0 5px 0 5px;
-    border-radius: 15px;
+.modules-right {
+  background: rgba(0, 0, 0, 0.65);
+  margin: 5px 5px;
+  padding: 0 5px 0 5px;
+  border-radius: 15px;
 }
-.modules-left
-{
-    background: rgba(0, 0, 0, .65);
-    margin: 5px 10px;
-    padding: 0 5px 0 5px;
-    border-radius: 15px;
+.modules-left {
+  background: rgba(0, 0, 0, 0.65);
+  margin: 5px 10px;
+  padding: 0 5px 0 5px;
+  border-radius: 15px;
 }
 .modules-center {
-    background: rgba(0, 0, 0, .65);
-    margin: 5px 5px;
-    padding: 0 5px 0 5px;
-    border-radius: 15px;
+  background: rgba(0, 0, 0, 0.65);
+  margin: 5px 5px;
+  padding: 0 5px 0 5px;
+  border-radius: 15px;
 }
 
 #clock,
@@ -53,8 +52,8 @@ window#waybar {
 #power-profiles-daemon,
 #language,
 #mpd {
-    padding: 0 5px 0 5px;
-    border-radius: 15px;
+  padding: 0 5px 0 5px;
+  border-radius: 15px;
 }
 
 #clock:hover,
@@ -75,9 +74,8 @@ window#waybar {
 #power-profiles-daemon:hover,
 #language:hover,
 #mpd:hover {
-    background: rgba(26, 27, 38, 0.9);
+  background: rgba(26, 27, 38, 0.9);
 }
-
 
 #workspaces button {
   background: transparent;
@@ -87,12 +85,12 @@ window#waybar {
   font-weight: 900;
   font-size: 13pt;
   color: #c0caf5;
-  border:none;
+  border: none;
   border-radius: 15px;
 }
 
 #workspaces button.active {
-    background: #13131d; 
+  background: #13131d;
 }
 
 #workspaces button:hover {
@@ -102,11 +100,12 @@ window#waybar {
 }
 
 #custom-arch {
-    margin-left: 5px;
-    padding: 0 10px;
-    font-size: 25px;
-    transition: color .5s;
+  margin-left: 5px;
+  padding: 0 10px;
+  font-size: 25px;
+  transition: color 0.5s;
 }
+
 #custom-arch:hover {
-    color: #1793d1;
+  color: #1793d1;
 }

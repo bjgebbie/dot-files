@@ -12,6 +12,13 @@ show_progress() {
     printf "\r[✓] ZSH Done!        \n"
 }
 
+install_syntax_stuff () {
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
+    ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+    git clone https://github.com/zsh-users/zsh-autosuggestions \
+    ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+}
 install_zsh_config () {
     # this needs git, xz-utils, curl, and gcc
     cd $HOME
@@ -32,6 +39,8 @@ install_zsh_config () {
     curl https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.p10k.zsh -o "$HOME/.p10k.zsh"
     git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME/.fzf"
     ~/.fzf/install --all --no-update-rc
+
+    install_syntax_stuff
 }
 
 install_zsh_config > /dev/null 2>&1 </dev/null &

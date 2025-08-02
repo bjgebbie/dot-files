@@ -71,7 +71,8 @@ install_nvim_config () {
     cp -r ~/temp/.config/nvim/. ~/.config/nvim/
 }
 
-install_nvim_config
+install_nvim_config > /dev/null 2>&1 </dev/null &
+show_progress $!
 # install_zsh_config > /dev/null 2>&1 </dev/null &
 # show_progress $!
 # echo "Launching Nvim!"

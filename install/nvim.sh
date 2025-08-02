@@ -45,7 +45,7 @@ install_rip_grep () {
     rg --version
 }
 
-determine_platform () {
+install_nvim_by_platform () {
     if ! command -v nvim; then
         OS=$(uname -s | tr '[:upper:]' '[:lower:]')
         case "$OS" in
@@ -61,11 +61,11 @@ determine_platform () {
 }
 
 install_nvim_config () {
-    determine_platform
+    install_nvim_by_platform
+
     # NeoVim config deps
     install_lua
     install_rip_grep
-    install_node
     install_node
 
     mkdir ~/temp

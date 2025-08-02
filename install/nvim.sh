@@ -74,7 +74,3 @@ install_nvim_config () {
 install_nvim_config > /dev/null 2>&1 </dev/null &
 show_progress $!
 source ~/.bashrc
-# install_zsh_config > /dev/null 2>&1 </dev/null &
-# show_progress $!
-# echo "Launching Nvim!"
-# nvim

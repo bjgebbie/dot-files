@@ -1,17 +1,5 @@
 #!/bin/bash
 
-show_progress() {
-    local spin='-\|/'
-    local i=0
-
-    while kill -0 "$1" 2>/dev/null; do
-        i=$(( (i+1) %4 ))
-        printf "\r[%c] Installing ZSH" "${spin:$i:1}"
-        sleep 0.1
-    done
-    printf "\r[✓] ZSH Done!        \n"
-}
-
 install_syntax_stuff () {
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
     ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -19,6 +7,7 @@ install_syntax_stuff () {
     git clone https://github.com/zsh-users/zsh-autosuggestions \
     ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 }
+
 install_zsh_config () {
     # this needs git, xz-utils, curl, and gcc
     cd $HOME
@@ -43,5 +32,4 @@ install_zsh_config () {
     install_syntax_stuff
 }
 
-install_zsh_config > /dev/null 2>&1 </dev/null &
-show_progress $!
+

@@ -1,6 +1,9 @@
 #!/bin/bash
 
+source ~/temp/install/utils/install-fonts.sh
+
 install_kitty_config () {
+    install_fonts
 
     if command -v kitty >/dev/null 2>&1; then
         curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
@@ -9,7 +12,7 @@ install_kitty_config () {
     cp -r ~/temp/.config/kitty/. .config/kitty/
 }
 
-source ~/temp/install/utils/install-fonts.sh
+
 install_kitty_config > /dev/null &
 source ~/temp/install/utils/progress-spinner.sh
 progress_spinner "Kitty" $!

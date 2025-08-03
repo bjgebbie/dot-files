@@ -49,7 +49,7 @@ install_nvim_by_platform () {
 }
 
 install_nvim_config () {
-    install_nvim_by_platform
+    install_nvim_by_platform > /dev/null
 
     # NeoVim config deps
     install_lua > /dev/null

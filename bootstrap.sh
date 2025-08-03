@@ -15,15 +15,12 @@ read -r input
 mkdir ~/temp
 git clone https://github.com/bjgebbie/dot-files.git ~/temp
 
-source ~/temp/install/zsh.sh
-source ~/temp/install/progress-spinner.sh
 
 if [[ $input == *0* ]]; then
 fi
 
 if [[ $input == *1* ]]; then
-    install_zsh_config > /dev/null 2>&1 </dev/null &
-    (progress_spinner "zsh") $!
+    source ~/temp/install/zsh.sh
 fi
 
 if [[ $input == *2* ]]; then

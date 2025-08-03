@@ -17,6 +17,7 @@ git clone https://github.com/bjgebbie/dot-files.git ~/temp
 
 
 if [[ $input == *0* ]]; then
+    echo "asdf"
 fi
 
 if [[ $input == *1* ]]; then

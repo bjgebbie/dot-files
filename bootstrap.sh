@@ -15,7 +15,7 @@ get_options () {
     read -r input
 
     if [[ ${#input} == 0 ]]; then
-        echo "No Option(s) Selected!"
+        printf "\nNo Option(s) Selected! \n\n"
         get_options ""
     fi
 }

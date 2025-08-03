@@ -1,4 +1,5 @@
 #!/bin/bash
+
 get_options () { 
     echo "Choose Options"
     echo "0) all"
@@ -11,16 +12,15 @@ get_options () {
     echo "7) rofi"
     echo -n "Enter number(s): "
 
-    local input=$1
     read -r input
 
     if [[ ${#input} == 0 ]]; then
         printf "\nNo Option(s) Selected! \n\n"
-        get_options ""
+        get_options
     fi
 }
-input=""
-get_options input 
+
+get_options 
 
 if [[ $dryrun != "1" ]]; then 
     mkdir ~/temp 

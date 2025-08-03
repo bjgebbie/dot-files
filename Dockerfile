@@ -13,7 +13,7 @@ RUN apt-get update && \
         
 # COPY . /root/temp
 
-RUN chmod +x /root/temp/install/*
+# RUN chmod +x /root/temp/install/*
 
 # WORKDIR /root/temp
 

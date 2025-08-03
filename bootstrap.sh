@@ -26,18 +26,16 @@ if [[ $dryrun != "1" ]]; then
     git clone https://github.com/bjgebbie/dot-files.git ~/temp
 fi
 
-case $input in
-    *1*)
-        source ~/temp/install/kitty.sh
-        ;;
-    *2*)
-        source ~/temp/install/zsh.sh
-        ;;
-    *3*)
-        source ~/temp/install/nvim.sh
-        ;;
-    *)
-        echo "${input} not setup"
-        ;;
-esac
+if [[ $input == *1* ]]; then
+    source ~/temp/install/kitty.zsh
+fi
+
+if [[ $input == *2* ]]; then
+    source ~/temp/install/zsh.sh
+fi
+
+if [[ $input == *3* ]]; then
+    source ~/temp/install/nvim.sh
+fi
+
 # rm -rf ~/temp

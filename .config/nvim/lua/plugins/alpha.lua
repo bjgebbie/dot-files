@@ -8,6 +8,7 @@ return {
 	config = function()
 		local alpha = require("alpha")
 		local dashboard = require("alpha.themes.dashboard")
+
 		dashboard.section.header.val = {
 			[[                                                                                            ]],
 			[[                                                                                            ]],
@@ -25,6 +26,7 @@ return {
 		}
 
 		dashboard.section.buttons.val = {
+			dashboard.button("r", "󰄉  Recent files", ":Telescope oldfiles<CR>"),
 			dashboard.button("f", "󰍉  Find file", ":Telescope find_files <CR>"),
 			dashboard.button("g", "󰦨  Find text", ":Telescope live_grep<CR>"),
 			dashboard.button("l", "󱧕  Lazy", ":Lazy <CR>"),

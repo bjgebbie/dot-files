@@ -20,7 +20,6 @@ return {
             local mason_lspconfig = require("mason-lspconfig")
 
             mason_lspconfig.setup({
-
                 ensure_installed = {
                     "terraformls",
                     "dockerls",
@@ -33,6 +32,29 @@ return {
                 },
                 automatic_installation = true,
             })
+
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+            local standard_setup = {
+                on_attach = on_attach,
+                capabilities,
+                vim.diagnostic.config({
+                    virtual_text = true,
+                    underline = true,
+                    signs = true,
+                    update_in_insert = true,
+                }),
+            }
+
+            lspconfig.terraformls.setup({ standard_setup })
+            lspconfig.dockerls.setup({ standard_setup })
+            lspconfig.lua_ls.setup({ standard_setup })
+            lspconfig.clangd.setup({ standard_setup })
+            lspconfig.eslint.setup({ standard_setup })
+            lspconfig.bashls.setup({ standard_setup })
+            lspconfig.yamlls.setup({ standard_setup })
+            lspconfig.jdtls.setup({ standard_setup })
+            lspconfig.ts_ls.setup({ standard_setup })
 
             -- mason_lspconfig.setup_handlers({
             --     function(server_name)

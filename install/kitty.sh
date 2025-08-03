@@ -1,24 +1,15 @@
 #!/bin/bash
 
-show_progress() {
-    local spin='-\|/'
-    local i=0
-
-    while kill -0 "$1" 2>/dev/null; do
-        i=$(( (i+1) %4 ))
-        printf "\r[%c] Installing Kitty" "${spin:$i:1}"
-        sleep 0.1
-    done
-    printf "\r[✓] Kitty Done!        \n"
-}
-
 install_kitty_config () {
+
     if command -v kitty >/dev/null 2>&1; then
         curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
     fi;
     mkdir -p .config/kitty/
-    curl https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.config/kitty/kitty.conf -o ~/.config/kitty/kitty.conf
+    cp -r i~/temp/.config/kitty/. .config/kitty/
 }
 
-install_kitty_config > /dev/null 2>&1 </dev/null &
-show_progress $!
+source ~/temp/install/utils/install-fonts.sh
+install_kitty_config > /dev/null &
+source ~/temp/install/utils/progress-spinner.sh
+progress_spinner "Kitty" $!

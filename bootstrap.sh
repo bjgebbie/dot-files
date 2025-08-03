@@ -27,7 +27,7 @@ if [[ $dryrun != "1" ]]; then
 fi
 
 if [[ $input == *1* ]]; then
-    source ~/temp/install/kitty.zsh
+    source ~/temp/install/kitty.sh
 fi
 
 if [[ $input == *2* ]]; then

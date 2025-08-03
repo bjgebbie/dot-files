@@ -4,6 +4,7 @@ RUN apt-get update && \
     apt-get install -y curl && \
     apt update && \
     apt install -y \ 
+        fontconfig \
         wget \
         git \
         sudo \

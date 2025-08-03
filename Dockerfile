@@ -11,5 +11,7 @@ RUN apt-get update && \
         unzip \ 
         libncurses-dev
         
+COPY ./bootstrap.sh /root/bootstrap.sh
+
 CMD ["bash", "-c", "/bin/bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/bootstrap.sh); /bin/bash"]
 

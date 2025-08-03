@@ -31,5 +31,3 @@ install_zsh_config () {
 
     install_syntax_stuff
 }
-
-

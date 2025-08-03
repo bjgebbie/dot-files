@@ -55,4 +55,4 @@ if [[ $input == *6* ]]; then
     source ~/temp/install/nvim.sh
 fi
 
-rm -rf ~/temp
+# rm -rf ~/temp

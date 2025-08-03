@@ -17,5 +17,5 @@ RUN apt-get update && \
 
 # WORKDIR /root/temp
 
-CMD ["bash", "-c", "bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/bootstrap-clone-repo/bootstrap.sh); /bin/bash"]
+CMD ["bash", "-c", "bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/bootstrap.sh); /bin/bash"]
 

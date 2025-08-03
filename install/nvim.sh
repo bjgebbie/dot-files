@@ -52,10 +52,10 @@ install_nvim_config () {
     install_nvim_by_platform
 
     # NeoVim config deps
-    install_lua
-    install_rip_grep
-    install_node
-
+    install_lua > /dev/null
+    install_rip_grep > /dev/null
+    install_node > /dev/null
+ 
     mkdir ~/temp
     mkdir -p ~/.config/nvim
     cp -r ~/temp/.config/nvim/. ~/.config/nvim/

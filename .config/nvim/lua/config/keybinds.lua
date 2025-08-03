@@ -4,3 +4,7 @@ vim.api.nvim_set_keymap("t", "<C-w>", "<C-\\><C-n>:winc<CR>", { noremap = true, 
 vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
+
+vim.keymap.set("n", "<Esc>", function()
+	require("notify").dismiss({ silent = true, pending = true })
+end, { desc = "Clear notifications", noremap = true, silent = true })

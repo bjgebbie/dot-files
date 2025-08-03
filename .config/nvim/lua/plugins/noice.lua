@@ -4,6 +4,8 @@ return {
 		version = "^3.0.0",
 		config = function()
 			require("notify").setup({
+				stages = "fade", -- optional: visual animation
+				render = "compact", -- 👈 this is the key line
 				background_colour = "#111111",
 			})
 		end,

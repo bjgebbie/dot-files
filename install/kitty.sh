@@ -6,7 +6,7 @@ install_kitty_config () {
         curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
     fi;
     mkdir -p .config/kitty/
-    cp -r i~/temp/.config/kitty/. .config/kitty/
+    cp -r ~/temp/.config/kitty/. .config/kitty/
 }
 
 source ~/temp/install/utils/install-fonts.sh

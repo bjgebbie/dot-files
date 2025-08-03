@@ -1,17 +1,5 @@
 #!/bin/bash
 
-show_progress() {
-    local spin='-\|/'
-    local i=0
-
-    while kill -0 "$1" 2>/dev/null; do
-        i=$(( (i+1) %4 ))
-        printf "\r[%c] Installing Nvim" "${spin:$i:1}"
-        sleep 0.1
-    done
-    printf "\r[✓] Nvim Done!        \n"
-}
-
 install_lua () {
     curl -R https://www.lua.org/ftp/lua-5.4.6.tar.gz -o /usr/local/lua-5.4.6.tar.gz
     tar zxf /usr/local/lua-5.4.6.tar.gz -C /usr/local/
@@ -70,11 +58,10 @@ install_nvim_config () {
 
     mkdir ~/temp
     mkdir -p ~/.config/nvim
-    git clone https://github.com/bjgebbie/dot-files.git ~/temp
-
     cp -r ~/temp/.config/nvim/. ~/.config/nvim/
 }
 
-install_nvim_config > /dev/null 2>&1 </dev/null &
-show_progress $!
+install_nvim_config > /dev/null &
+source ~/temp/install/utils/progress-spinner.sh
+progress_spinner "NeoVim" $!
 source ~/.bashrc

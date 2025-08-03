@@ -52,7 +52,7 @@ if [[ $input == *5* ]]; then
 fi
 
 if [[ $input == *6* ]]; then
-    bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/install/nvim.sh)
+    source ~/temp/install/nvim.sh
 fi
 
 rm -rf ~/temp

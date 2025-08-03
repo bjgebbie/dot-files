@@ -11,5 +11,11 @@ RUN apt-get update && \
         unzip \ 
         libncurses-dev
         
-CMD ["bash", "-c", "/bin/bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/bootstrap.sh); /bin/bash"]
+# COPY . /root/temp
+
+# RUN chmod +x /root/temp/install/*
+
+# WORKDIR /root/temp
+
+CMD ["bash", "-c", "bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/bootstrap-clone-repo/bootstrap.sh); /bin/bash"]
 

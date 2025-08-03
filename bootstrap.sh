@@ -8,16 +8,20 @@ echo "3) hypr"
 echo "4) dolphinrc"
 echo "5) waybar"
 echo "6) nvim"
+echo "7) rofi"
 echo -n "Enter number(s): "
 read -r input
 
+mkdir ~/temp
+git clone https://github.com/bjgebbie/dot-files.git ~/temp
+
+
 if [[ $input == *0* ]]; then
-    bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/install/zsh.sh)
-    bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/install/kitty.sh)
+    echo "asdf"
 fi
 
 if [[ $input == *1* ]]; then
-    bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/install/zsh.sh)
+    source ~/temp/install/zsh.sh
 fi
 
 if [[ $input == *2* ]]; then

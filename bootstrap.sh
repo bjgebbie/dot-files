@@ -1,20 +1,31 @@
 #!/bin/bash
+get_options () { 
+    echo "Choose Options"
+    echo "0) all"
+    echo "1) zsh"
+    echo "2) kitty"
+    echo "3) hypr"
+    echo "4) dolphinrc"
+    echo "5) waybar"
+    echo "6) nvim"
+    echo "7) rofi"
+    echo -n "Enter number(s): "
 
-echo "Choose Options"
-echo "0) all"
-echo "1) zshrc"
-echo "2) kitty"
-echo "3) hypr"
-echo "4) dolphinrc"
-echo "5) waybar"
-echo "6) nvim"
-echo "7) rofi"
-echo -n "Enter number(s): "
-read -r input
+    local input=$1
+    read -r input
 
-mkdir ~/temp
-git clone https://github.com/bjgebbie/dot-files.git ~/temp
+    if [[ ${#input} == 0 ]]; then
+        echo "No Option(s) Selected!"
+        get_options ""
+    fi
+}
+input=""
+get_options input 
 
+if [[ $dryrun != "1" ]]; then 
+    mkdir ~/temp 
+    git clone https://github.com/bjgebbie/dot-files.git ~/temp
+fi
 
 if [[ $input == *0* ]]; then
     echo "asdf"
@@ -43,3 +54,5 @@ fi
 if [[ $input == *6* ]]; then
     bash <(curl -fsSL https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/install/nvim.sh)
 fi
+
+rm -rf ~/temp

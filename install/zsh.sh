@@ -31,6 +31,6 @@ install_zsh_config () {
 
     install_syntax_stuff
 }
-(install_zsh_config > /dev/null) &
+install_zsh_config > /dev/null 2>&1 </dev/null &
 source ~/temp/install/utils/progress-spinner.sh
 progress_spinner "zsh" $!

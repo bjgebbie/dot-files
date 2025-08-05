@@ -13,6 +13,8 @@ install_fzf () {
     ~/.fzf/install --all --no-update-rc
     echo "source <(fzf --zsh)" >> ~/.zshrc
 }
+
+
 install_zsh_config () {
     # this needs git, xz-utils, curl, and gcc
     cd $HOME
@@ -31,17 +33,20 @@ install_zsh_config () {
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" 
     curl https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.zshrc -o "$HOME/.zshrc"
     curl https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.p10k.zsh -o "$HOME/.p10k.zsh"
-
 }
 
-if ! command -v zsh >/dev/null 2>&1; then
-    install_zsh_config > /dev/null
-fi
+dynamic_load () {
+    if ! command -v zsh >/dev/null 2>&1; then
+        install_zsh_config > /dev/null
+    fi
 
-if ! command -v fzf >/dev/null 2>&1; then
-    install_fzf > /dev/null
-fi
+    if ! command -v fzf >/dev/null 2>&1; then
+        install_fzf > /dev/null
+    fi
 
-install_syntax_stuff > /dev/null
+    install_syntax_stuff > /dev/null
+}
+
+dynamic_load &
 source ~/temp/install/utils/progress-spinner.sh
 progress_spinner "zsh" $!

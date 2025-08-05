@@ -11,5 +11,6 @@ progress_spinner () {
         printf "\r[%c] Installing ${installation}" "${spin:$i:1}"
         sleep 0.1
     done
+
     printf "\r[✓] ${installation} Installed!        \n"
 }

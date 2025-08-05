@@ -32,9 +32,16 @@ install_zsh_config () {
     curl https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.zshrc -o "$HOME/.zshrc"
     curl https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.p10k.zsh -o "$HOME/.p10k.zsh"
 
-    install_syntax_stuff
-    install_fzf
 }
-install_zsh_config > /dev/null
+
+if ! command -v zsh >/dev/null 2>&1; then
+    install_zsh_config > /dev/null
+fi
+
+if ! command -v fzf >/dev/null 2>&1; then
+    install_fzf > /dev/null
+fi
+
+install_syntax_stuff > /dev/null
 source ~/temp/install/utils/progress-spinner.sh
 progress_spinner "zsh" $!

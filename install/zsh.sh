@@ -8,6 +8,11 @@ install_syntax_stuff () {
     ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 }
 
+install_fzf () { 
+    git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME/.fzf"
+    ~/.fzf/install --all --no-update-rc
+    echo "source <(fzf --zsh)" >> ~/.zshrc
+}
 install_zsh_config () {
     # this needs git, xz-utils, curl, and gcc
     cd $HOME
@@ -26,10 +31,9 @@ install_zsh_config () {
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" 
     curl https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.zshrc -o "$HOME/.zshrc"
     curl https://raw.githubusercontent.com/bjgebbie/dot-files/refs/heads/master/.p10k.zsh -o "$HOME/.p10k.zsh"
-    git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME/.fzf"
-    ~/.fzf/install --all --no-update-rc
 
     install_syntax_stuff
+    install_fzf
 }
 install_zsh_config > /dev/null
 source ~/temp/install/utils/progress-spinner.sh

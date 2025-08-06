@@ -14,14 +14,6 @@ install_fzf () {
     echo "source <(fzf --zsh)" >> ~/.zshrc
 }
 
-install_python () {
-
-}
-
-install_sdk_man () {
-
-}
-
 install_zsh_config () {
     # this needs git, xz-utils, curl, and gcc
     cd $HOME

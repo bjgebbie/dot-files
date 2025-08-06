@@ -46,11 +46,12 @@ install_python () {
     ./configure --enable-optimizations
     make -j$(nproc)
     sudo make altinstall
+    mv python /usr/bin/
     cd
 }
 
 install_sdk_man () {
-echo asdf 
+    echo asdf 
 }
 
 

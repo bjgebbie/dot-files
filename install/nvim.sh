@@ -51,7 +51,7 @@ install_python () {
 }
 
 install_sdk_man () {
-    echo asdf 
+    curl -s "https://get.sdkman.io" | bash
 }
 
 

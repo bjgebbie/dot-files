@@ -50,7 +50,7 @@ install_python () {
 }
 
 install_sdk_man () {
-
+echo asdf 
 }
 
 

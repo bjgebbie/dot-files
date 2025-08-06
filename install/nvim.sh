@@ -6,6 +6,7 @@ install_lua () {
     cd /usr/local/lua-5.4.6
     make linux test
     make install  # May require sudo
+    cd
 }
 
 install_node () {
@@ -15,6 +16,7 @@ install_node () {
     echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bashrc
     echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.bashrc
     nvm install --lts
+    cd
 }
 
 install_rip_grep () {
@@ -31,7 +33,26 @@ install_rip_grep () {
 
     # verify
     rg --version
+    cd
 }
+
+install_python () {
+    # Download latest Python 3.12 source (or adjust version)
+    curl -LO https://www.python.org/ftp/python/3.12.2/Python-3.12.2.tgz
+
+    # Extract and install
+    tar -xzf Python-3.12.2.tgz
+    cd Python-3.12.2
+    ./configure --enable-optimizations
+    make -j$(nproc)
+    sudo make altinstall
+    cd
+}
+
+install_sdk_man () {
+
+}
+
 
 install_nvim_by_platform () {
     if ! command -v nvim; then
@@ -62,8 +83,10 @@ install_nvim_config () {
     if ! command -v node >/dev/null 2>&1; then
         install_node > /dev/null
     fi
- 
-    mkdir ~/temp
+    if ! command -v  python >/dev/null 2>&1; then
+        install_python
+    fi
+
     mkdir -p ~/.config/nvim
     cp -r ~/temp/.config/nvim/. ~/.config/nvim/
 }

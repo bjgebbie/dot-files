@@ -52,8 +52,9 @@ install_python () {
 
 install_sdk_man () {
     curl -s "https://get.sdkman.io" | bash
+    source ~/.bashrc
+    sdk install java 21.0.8-amzn
 }
-
 
 install_nvim_by_platform () {
     if ! command -v nvim; then
@@ -84,10 +85,12 @@ install_nvim_config () {
     if ! command -v node >/dev/null 2>&1; then
         install_node > /dev/null
     fi
-    if ! command -v  python >/dev/null 2>&1; then
+    if ! command -v python >/dev/null 2>&1; then
         install_python
     fi
-
+    if ! command -v sdk >/dev/null 2>&1; then
+        install_sdk_man 
+    fi
     mkdir -p ~/.config/nvim
     cp -r ~/temp/.config/nvim/. ~/.config/nvim/
 }

@@ -10,6 +10,7 @@ RUN apt-get update && \
         sudo \
         xz-utils \
         build-essential \ 
+        zip \
         unzip \ 
         libncurses-dev
         

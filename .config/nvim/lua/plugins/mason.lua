@@ -28,6 +28,7 @@ return {
                     "eslint",
                     "lua_ls",
                     "yamlls",
+                    "jdtls",
                     "ts_ls",
                 },
                 automatic_installation = true,

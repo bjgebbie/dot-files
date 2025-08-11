@@ -1,5 +1,6 @@
 return {
 	"mfussenegger/nvim-jdtls",
+	ft = "java",
 	config = function()
 		-- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
 		local home = os.getenv("HOME")

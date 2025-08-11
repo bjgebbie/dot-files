@@ -22,8 +22,9 @@ get_options () {
 get_options 
 
 if [[ $dryrun != "1" ]]; then 
-    mkdir ~/temp 
-    git clone https://github.com/bjgebbie/dot-files.git ~/temp
+    mkdir "$HOME/temp" 
+    git clone https://github.com/bjgebbie/dot-files.git  "$HOME/temp"
+    cd "$HOME/temp"
 fi
 
 if [[ $input == *1* ]]; then
@@ -31,11 +32,11 @@ if [[ $input == *1* ]]; then
 fi
 
 if [[ $input == *2* ]]; then
-    source ~/temp/install/zsh.sh
+    source install/zsh.sh
 fi
 
 if [[ $input == *3* ]]; then
     source ~/temp/install/nvim.sh
 fi
 
-# rm -rf ~/temp
+rm -rf "$HOME/temp"

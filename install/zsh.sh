@@ -46,6 +46,7 @@ install_zsh_config () {
     install_oh_my_zsh 
     install_p10k
     install_zsh_plugins 
+
     cp .zshrc .p10k.zsh "$HOME"
 }
 

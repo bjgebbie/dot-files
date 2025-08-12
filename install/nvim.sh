@@ -91,8 +91,8 @@ install_nvim_config () {
     if ! command -v sdk >/dev/null 2>&1; then
         install_sdk_man 
     fi
-    mkdir -p ~/.config/nvim
-    cp -r ~/temp/.config/nvim/. ~/.config/nvim/
+    mkdir -p "$HOME/.config/nvim"
+    cp -r "$HOME/temp/.config/nvim/." "$HOME/.config/nvim/"
 }
 
 install_nvim_config > /dev/null &

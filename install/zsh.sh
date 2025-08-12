@@ -36,7 +36,7 @@ install_p10k () {
 }
 
 install_zsh_config () {
-    if ! command -v zsh >/dev/null 2>&1; then
+    if ! command -v zsh > /dev/null 2>&1; then
         install_zsh > /dev/null
     fi
     if ! command -v fzf >/dev/null 2>&1; then

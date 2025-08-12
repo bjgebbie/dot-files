@@ -12,8 +12,14 @@ vim.keymap.set("n", "<Esc>", function()
     require("notify").dismiss({ silent = true, pending = true })
 end, { desc = "Clear notifications", noremap = true, silent = true })
 
+-- Language Server
 vim.keymap.set("n", "<leader>lr", ":lua vim.lsp.buf.rename()<CR>", {
     noremap = true,
     silent = true,
     desc = "Rename on cursor",
+})
+vim.keymap.set("n", "<leader>lc", ":lua vim.lsp.buf.references()<CR>", {
+    noremap = true,
+    silent = true,
+    desc = "Find references",
 })

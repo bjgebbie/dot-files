@@ -5,7 +5,7 @@ install_lua () {
     tar zxf /usr/local/lua-5.4.6.tar.gz -C /usr/local/
     cd /usr/local/lua-5.4.6
     make linux test
-    make install  # May require sudo
+    make install # May require sudo
     cd
 }
 

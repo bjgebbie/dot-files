@@ -1,6 +1,7 @@
 return {
     {
         "williamboman/mason.nvim",
+
         version = "^2.0.0",
         lazy = false,
         config = function()
@@ -75,10 +76,14 @@ return {
     {
         "jay-babu/mason-nvim-dap.nvim",
         lazy = false,
+        dependencies = {
+            "williamboman/mason.nvim",
+            "mfussenegger/nvim-dap",
+        },
         config = function()
             require("mason-nvim-dap").setup({
-                ensured_installed = {
-                    "js-debug-adapter",
+                ensure_installed = {
+                    "js",
                 },
             })
         end,

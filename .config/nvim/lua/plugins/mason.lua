@@ -22,6 +22,7 @@ return {
 
             mason_lspconfig.setup({
                 ensure_installed = {
+                    "rust_analyzer",
                     "terraformls",
                     "dockerls",
                     "bashls",

@@ -4,8 +4,6 @@
         "tooltip": true,
         "tooltip-format": "btw"
     },
-
-
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -91,5 +89,4 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     }
-
 }

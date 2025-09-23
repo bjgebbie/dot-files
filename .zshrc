@@ -15,6 +15,11 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+fuzkill() {
+    pid=$(ps -e | fzf | awk '{print $1}') &&
+    kill -9 $pid &&
+    echo "[$pid] Killed With Signal 9"
+}
 
 alias ff="firefox& 2> /dev/null"
 alias pi="sudo pacman -Sy"

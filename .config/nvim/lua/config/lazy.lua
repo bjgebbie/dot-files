@@ -27,6 +27,9 @@ require("lazy").setup({
     spec = {
         -- import your plugins
         { import = "plugins" },
+        { import = "plugins.mason" },
+        { import = "plugins.debug" },
+        { import = "plugins.language-server" },
     },
     -- automatically check for plugin updates
     checker = { enabled = true },

@@ -1,11 +1,5 @@
 return {
-	"mfussenegger/nvim-dap",
-	config = function()
-		require("dap")
-		local dap = require("dap")
-
-		-- Get the js-debug-adapter path from Mason
-		local mason_path = vim.fn.stdpath("data") .. "/mason"
+	setup = function(dap, mason_path)
 		local js_debug_path = mason_path .. "/packages/js-debug-adapter"
 
 		dap.adapters["pwa-node"] = {

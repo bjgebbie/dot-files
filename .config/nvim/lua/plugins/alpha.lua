@@ -31,7 +31,7 @@ return {
 			dashboard.button("g", "󰦨  Find text", ":Telescope live_grep<CR>"),
 			dashboard.button("l", "󱧕  Lazy", ":Lazy <CR>"),
 			dashboard.button("m", "󱧘  Mason", ":Mason <CR>"),
-			dashboard.button("p", "  Open Project", ":Neotree <CR> <C-t> <CR>"),
+			dashboard.button("e", "  Open Explorer", ":Neotree <CR> <C-t> <CR>"),
 			dashboard.button("q", "󰅚  Quit NVIM", ":qa<CR>"),
 			-- dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
 		}

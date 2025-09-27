@@ -1,5 +1,6 @@
 return {
     "rcarriga/nvim-dap-ui",
+    version = "^4.0.0",
     dependencies = {
         "mfussenegger/nvim-dap",
         "nvim-neotest/nvim-nio",

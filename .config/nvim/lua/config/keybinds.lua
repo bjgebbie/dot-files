@@ -1,8 +1,3 @@
--- open term work around
--- vim.api.nvim_create_user_command("xqa", function()
--- 	vim.cmd("wa")
--- 	vim.cmd("qa")
--- end, {})
 -- Terminal Control
 vim.api.nvim_set_keymap("n", "<C-t>", ":lua toggle_terminal()<CR>i", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<C-t>", "<C-\\><C-n>:lua toggle_terminal()<CR>", { noremap = true, silent = true })

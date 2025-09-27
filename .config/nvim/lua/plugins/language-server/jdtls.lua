@@ -5,6 +5,10 @@ return {
 		local home = os.getenv("HOME")
 		local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 		local workspace_dir = home .. "/.local/share/eclipse/" .. project_name
+		local jdtls = require("jdtls")
+
+		local mason_path = vim.fn.stdpath("data") .. "/mason"
+		local java_debug_adapter = mason_path .. "/packages/java-debug-adapter"
 
 		local config = {
 			cmd = {
@@ -33,7 +37,9 @@ return {
 				java = {},
 			},
 			init_options = {
-				bundles = {},
+				bundles = {
+					java_debug_adapter .. "/extension/server/com.microsoft.java.debug.plugin-0.53.2.jar",
+				},
 			},
 		}
 		require("jdtls").start_or_attach(config)

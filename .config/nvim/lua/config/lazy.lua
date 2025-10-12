@@ -1,17 +1,17 @@
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-    if vim.v.shell_error ~= 0 then
-        vim.api.nvim_echo({
-            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-            { out,                            "WarningMsg" },
-            { "\nPress any key to exit..." },
-        }, true, {})
-        vim.fn.getchar()
-        os.exit(1)
-    end
+	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+	if vim.v.shell_error ~= 0 then
+		vim.api.nvim_echo({
+			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+			{ out, "WarningMsg" },
+			{ "\nPress any key to exit..." },
+		}, true, {})
+		vim.fn.getchar()
+		os.exit(1)
+	end
 end
 vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
@@ -19,20 +19,24 @@ vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
-    peformance = {
-        rtp = {
-            disabled_plugins = { "netrwPlugin", "tarPlugin", "zipPlugin" },
-        },
-    },
-    spec = {
-        -- import your plugins
-        { import = "plugins" },
-        { import = "plugins.mason" },
-        { import = "plugins.debug" },
-        { import = "plugins.language-server" },
-    },
-    -- automatically check for plugin updates
-    checker = { enabled = true },
+	ui = {
+
+		border = "rounded",
+	},
+	peformance = {
+		rtp = {
+			disabled_plugins = { "netrwPlugin", "tarPlugin", "zipPlugin" },
+		},
+	},
+	spec = {
+		-- import your plugins
+		{ import = "plugins" },
+		{ import = "plugins.mason" },
+		{ import = "plugins.lsp" },
+		{ import = "plugins.lang" },
+	},
+	-- automatically check for plugin updates
+	checker = { enabled = true },
 })
 
 require("config.options.index")

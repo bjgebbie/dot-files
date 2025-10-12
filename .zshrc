@@ -21,10 +21,9 @@ fuzkill() {
     echo "[$pid] Killed With Signal 9"
 }
 
-alias ff="firefox& 2> /dev/null"
 alias pi="sudo pacman -Sy"
 alias vim="nvim"
-alias vi="vim"
+alias ls="eza -1halrb --icons --group-directories-first --total-size"
 
 bindkey -v
 
@@ -32,6 +31,8 @@ bindkey -v
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+eval "$(zoxide init bash)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

@@ -1,0 +1,554 @@
+                                   mason.nvim v2.1.0 
+                                   press g? for help
+                        https://github.com/mason-org/mason.nvim
+   (1) All   (2) LSP   (3) DAP   (4) Linter   (5) Formatter  
+
+  Language Filter: press <C-f> to apply filter
+
+  Installed
+    ◍ bash-language-server bashls
+    ◍ clangd
+    ◍ dockerfile-language-server dockerls
+    ◍ eslint-lsp eslint
+    ◍ java-debug-adapter
+    ◍ js-debug-adapter
+    ◍ lua-language-server lua_ls
+    ◍ rust-analyzer rust_analyzer
+    ◍ rustfmt
+    ◍ stylua
+    ◍ terraform-ls terraformls
+    ◍ typescript-language-server ts_ls
+    ◍ yaml-language-server yamlls
+
+  Available
+    ◍ jdtls
+    ◍ actionlint
+    ◍ ada-language-server
+    ◍ aiken
+    ◍ air
+    ◍ alejandra
+    ◍ alex
+    ◍ angular-language-server angularls
+    ◍ ansible-language-server ansiblels
+    ◍ ansible-lint
+    ◍ antlers-language-server antlersls
+    ◍ apex-language-server
+    ◍ api-linter
+    ◍ arduino-language-server arduino_language_server
+    ◍ asm-lsp asm_lsp
+    ◍ asmfmt
+    ◍ ast-grep ast_grep
+    ◍ astro-language-server astro
+    ◍ autoflake
+    ◍ autopep8
+    ◍ autotools-language-server autotools_ls
+    ◍ awk-language-server awk_ls
+    ◍ azure-pipelines-language-server azure_pipelines_ls
+    ◍ bacon
+    ◍ bacon-ls bacon_ls
+    ◍ bandit
+    ◍ basedpyright
+    ◍ bash-debug-adapter
+    ◍ basics-language-server
+    ◍ bazelrc-lsp bazelrc_lsp
+    ◍ beancount-language-server beancount
+    ◍ beanhub-cli
+    ◍ beautysh
+    ◍ bibtex-tidy
+    ◍ bicep-lsp bicep
+    ◍ biome
+    ◍ black
+    ◍ blackd-client
+    ◍ blade-formatter
+    ◍ blue
+    ◍ brighterscript bright_script
+    ◍ brighterscript-formatter
+    ◍ brunette
+    ◍ bsl-language-server bsl_ls
+    ◍ bslint
+    ◍ buf buf_ls
+    ◍ buf-language-server deprecated
+    ◍ buildifier
+    ◍ bzl
+    ◍ c3-lsp
+    ◍ cairo-language-server cairo_ls
+    ◍ cbfmt
+    ◍ cds-lsp
+    ◍ cfn-lint
+    ◍ checkmake
+    ◍ checkstyle
+    ◍ chrome-debug-adapter deprecated
+    ◍ circleci-yaml-language-server
+    ◍ circom-lsp
+    ◍ clang-format
+    ◍ clarinet
+    ◍ clarity-lsp clarity_lsp deprecated
+    ◍ clj-kondo
+    ◍ cljfmt
+    ◍ clojure-lsp clojure_lsp
+    ◍ cmake-language-server cmake
+    ◍ cmakelang
+    ◍ cmakelint
+    ◍ cobol-language-support cobol_ls
+    ◍ codebook
+    ◍ codelldb
+    ◍ codeql codeqlls
+    ◍ codespell
+    ◍ coffeesense-language-server
+    ◍ colorgen-nvim
+    ◍ commitlint
+    ◍ contextive
+    ◍ copilot-language-server copilot
+    ◍ coq-lsp coq_lsp
+    ◍ cortex-debug
+    ◍ cpplint
+    ◍ cpptools
+    ◍ cql-language-server
+    ◍ crlfmt
+    ◍ crystalline
+    ◍ csharp-language-server csharp_ls
+    ◍ csharpier
+    ◍ cspell
+    ◍ cspell-lsp cspell_ls
+    ◍ css-lsp cssls
+    ◍ css-variables-language-server css_variables
+    ◍ cssmodules-language-server cssmodules_ls
+    ◍ cucumber-language-server cucumber_language_server
+    ◍ cueimports
+    ◍ cuelsp dagger
+    ◍ cuepls deprecated
+    ◍ curlylint
+    ◍ custom-elements-languageserver custom_elements_ls
+    ◍ cypher-language-server cypher_ls
+    ◍ darker
+    ◍ dart-debug-adapter
+    ◍ dcm
+    ◍ debugpy
+    ◍ delve
+    ◍ deno denols
+    ◍ detekt
+    ◍ dhall-lsp dhall_lsp_server
+    ◍ diagnostic-languageserver diagnosticls
+    ◍ digestif
+    ◍ django-template-lsp
+    ◍ djlint
+    ◍ docformatter
+    ◍ docker-compose-language-service docker_compose_language_service
+    ◍ docker-language-server docker_language_server
+    ◍ doctoc
+    ◍ dot-language-server dotls
+    ◍ dotenv-linter
+    ◍ dprint
+    ◍ drools-lsp
+    ◍ duster
+    ◍ earthlyls
+    ◍ easy-coding-standard
+    ◍ editorconfig-checker
+    ◍ efm
+    ◍ elixir-ls elixirls
+    ◍ elm-format
+    ◍ elm-language-server elmls
+    ◍ elp
+    ◍ ember-language-server ember
+    ◍ emmet-language-server emmet_language_server
+    ◍ emmet-ls emmet_ls
+    ◍ emmylua-codeformat
+    ◍ emmylua_ls
+    ◍ erb-formatter
+    ◍ erb-lint
+    ◍ erg
+    ◍ erg-language-server erg_language_server
+    ◍ erlang-debugger
+    ◍ erlang-ls erlangls
+    ◍ esbonio
+    ◍ eslint_d
+    ◍ eugene
+    ◍ expert
+    ◍ facility-language-server facility_language_server
+    ◍ fantomas
+    ◍ fennel-language-server fennel_language_server
+    ◍ fennel-ls fennel_ls
+    ◍ findent
+    ◍ firefox-debug-adapter
+    ◍ fish-lsp fish_lsp
+    ◍ fixjson
+    ◍ flake8
+    ◍ flakeheaven
+    ◍ flux-lsp flux_lsp
+    ◍ foam-language-server foam_ls
+    ◍ fortls
+    ◍ fourmolu
+    ◍ fprettify
+    ◍ fsautocomplete
+    ◍ gci
+    ◍ gdtoolkit
+    ◍ gersemi
+    ◍ gh
+    ◍ gh-actions-language-server gh_actions_ls
+    ◍ ginko_ls
+    ◍ gitlab-ci-ls gitlab_ci_ls
+    ◍ gitleaks
+    ◍ gitlint
+    ◍ gitui
+    ◍ glint
+    ◍ glow
+    ◍ glsl_analyzer
+    ◍ glslls
+    ◍ go-debug-adapter
+    ◍ gofumpt
+    ◍ goimports
+    ◍ goimports-reviser
+    ◍ golangci-lint
+    ◍ golangci-lint-langserver golangci_lint_ls
+    ◍ golines
+    ◍ gomodifytags
+    ◍ google-java-format
+    ◍ gopls
+    ◍ gospel
+    ◍ gotests
+    ◍ gotestsum
+    ◍ gradle-language-server gradle_ls
+    ◍ grammarly-languageserver grammarly
+    ◍ graphql-language-service-cli graphql
+    ◍ groovy-language-server groovyls
+    ◍ hadolint
+    ◍ haml-lint
+    ◍ harper-ls harper_ls
+    ◍ haskell-debug-adapter
+    ◍ haskell-language-server hls
+    ◍ haxe-language-server haxe_language_server
+    ◍ hclfmt
+    ◍ hdl-checker hdl_checker
+    ◍ helm-ls helm_ls
+    ◍ herb-language-server herb_ls
+    ◍ hlint
+    ◍ hoon-language-server hoon_ls
+    ◍ html-lsp html
+    ◍ htmlbeautifier
+    ◍ htmlhint
+    ◍ htmx-lsp htmx
+    ◍ hydra-lsp hydra_lsp
+    ◍ hyprls
+    ◍ iferr
+    ◍ impl
+    ◍ intelephense
+    ◍ isort
+    ◍ java-language-server java_language_server
+    ◍ java-test
+    ◍ jayvee-language-server
+    ◍ jedi-language-server jedi_language_server
+    ◍ jinja-lsp jinja_lsp
+    ◍ joker
+    ◍ jq
+    ◍ jq-lsp jqls
+    ◍ json-lsp jsonls
+    ◍ json-to-struct
+    ◍ jsonld-lsp
+    ◍ jsonlint
+    ◍ jsonnet-language-server jsonnet_ls
+    ◍ jsonnetfmt
+    ◍ julia-lsp julials
+    ◍ jupytext
+    ◍ just-lsp just
+    ◍ kcl
+    ◍ kdlfmt
+    ◍ kos-language-server
+    ◍ kotlin-debug-adapter
+    ◍ kotlin-language-server kotlin_language_server
+    ◍ kotlin-lsp kotlin_lsp
+    ◍ ktfmt
+    ◍ ktlint
+    ◍ kube-linter
+    ◍ kubescape
+    ◍ kulala-fmt
+    ◍ language-server-bitbake
+    ◍ laravel-ls laravel_ls
+    ◍ latexindent
+    ◍ lean-language-server
+    ◍ lelwel lelwel_ls
+    ◍ lemminx
+    ◍ lemmy-help
+    ◍ lemonade
+    ◍ lexical
+    ◍ llm-ls
+    ◍ local-lua-debugger-vscode
+    ◍ ltex-ls ltex
+    ◍ ltex-ls-plus ltex_plus
+    ◍ luacheck
+    ◍ luaformatter
+    ◍ luau-lsp luau_lsp
+    ◍ lwc-language-server lwc_ls
+    ◍ m68k-lsp-server
+    ◍ markdown-oxide markdown_oxide
+    ◍ markdown-toc
+    ◍ markdownlint
+    ◍ markdownlint-cli2
+    ◍ markmap-cli
+    ◍ marksman
+    ◍ markuplint
+    ◍ matlab-language-server matlab_ls
+    ◍ mdformat
+    ◍ mdsf
+    ◍ mdslw
+    ◍ mdx-analyzer mdx_analyzer
+    ◍ mesonlsp
+    ◍ metamath-zero-lsp mm0_ls
+    ◍ millet
+    ◍ misspell
+    ◍ mmdc
+    ◍ mockdebug
+    ◍ motoko-lsp motoko_lsp
+    ◍ move-analyzer move_analyzer
+    ◍ mutt-language-server mutt_ls
+    ◍ mypy
+    ◍ neocmakelsp neocmake
+    ◍ netcoredbg
+    ◍ nextflow-language-server nextflow_ls
+    ◍ nextls
+    ◍ nginx-config-formatter
+    ◍ nginx-language-server nginx_language_server
+    ◍ nickel-lang-lsp nickel_ls
+    ◍ nil nil_ls
+    ◍ nilaway
+    ◍ nimlangserver nim_langserver
+    ◍ nimlsp nimls
+    ◍ nixfmt
+    ◍ nixpkgs-fmt
+    ◍ node-debug2-adapter deprecated
+    ◍ nomad
+    ◍ nomicfoundation-solidity-language-server solidity_ls_nomicfoundation
+    ◍ npm-groovy-lint
+    ◍ ntt
+    ◍ nxls
+    ◍ ocaml-lsp ocamllsp
+    ◍ ocamlearlybird
+    ◍ ocamlformat
+    ◍ oelint-adv
+    ◍ ols
+    ◍ omnisharp
+    ◍ omnisharp-mono omnisharp_mono
+    ◍ opa
+    ◍ opencl-language-server opencl_ls
+    ◍ openedge-language-server
+    ◍ openscad-language-server
+    ◍ openscad-lsp openscad_lsp
+    ◍ ormolu
+    ◍ oxlint
+    ◍ pbls
+    ◍ perl-debug-adapter
+    ◍ perlnavigator
+    ◍ pest-language-server pest_ls
+    ◍ pgformatter
+    ◍ php-cs-fixer
+    ◍ php-debug-adapter
+    ◍ phpactor
+    ◍ phpcbf
+    ◍ phpcs
+    ◍ phpmd
+    ◍ phpstan
+    ◍ pico8-ls pico8_ls
+    ◍ pinact
+    ◍ pint
+    ◍ pkgbuild-language-server pkgbuild_language_server deprecated
+    ◍ pkl-lsp
+    ◍ postgrestools postgres_lsp
+    ◍ powershell-editor-services powershell_es
+    ◍ prettier
+    ◍ prettierd
+    ◍ pretty-php
+    ◍ prettydiff
+    ◍ prettypst
+    ◍ prisma-language-server prismals
+    ◍ prometheus-pint
+    ◍ proselint
+    ◍ prosemd-lsp prosemd_lsp
+    ◍ protolint
+    ◍ protols
+    ◍ psalm
+    ◍ pug-lsp
+    ◍ puppet-editor-services puppet
+    ◍ purescript-language-server purescriptls
+    ◍ purescript-tidy
+    ◍ pydocstyle
+    ◍ pyflakes
+    ◍ pyink
+    ◍ pylama
+    ◍ pylint
+    ◍ pylyzer
+    ◍ pymarkdownlnt
+    ◍ pyment
+    ◍ pyproject-flake8
+    ◍ pyproject-fmt
+    ◍ pyre
+    ◍ pyrefly
+    ◍ pyright
+    ◍ python-lsp-server pylsp
+    ◍ qmlls
+    ◍ quick-lint-js quick_lint_js
+    ◍ r-languageserver r_language_server
+    ◍ raku-navigator raku_navigator
+    ◍ reason-language-server reason_ls
+    ◍ reformat-gherkin
+    ◍ refurb
+    ◍ regal
+    ◍ regols
+    ◍ remark-cli
+    ◍ remark-language-server remark_ls
+    ◍ reorder-python-imports
+    ◍ rescript-language-server rescriptls
+    ◍ rescript-lsp deprecated
+    ◍ revive
+    ◍ ripper-tags
+    ◍ rnix-lsp rnix
+    ◍ robotcode
+    ◍ robotframework-lsp robotframework_ls
+    ◍ rome deprecated
+    ◍ rpm_lsp_server rpmspec
+    ◍ rpmlint
+    ◍ rstcheck
+    ◍ rubocop
+    ◍ ruby-lsp ruby_lsp
+    ◍ rubyfmt
+    ◍ ruff
+    ◍ ruff-lsp deprecated
+    ◍ rufo
+    ◍ rust_hdl vhdl_ls
+    ◍ rustywind
+    ◍ salt-lint
+    ◍ salt-lsp salt_ls
+    ◍ selene
+    ◍ semgrep
+    ◍ serve-d serve_d
+    ◍ shellcheck
+    ◍ shellharden
+    ◍ shfmt
+    ◍ shopify-cli shopify_theme_ls
+    ◍ shopify-theme-check theme_check deprecated
+    ◍ sith-language-server
+    ◍ slang slangd
+    ◍ sleek
+    ◍ slint-lsp slint_lsp
+    ◍ smithy-language-server smithy_ls
+    ◍ snakefmt
+    ◍ snakeskin-cli snakeskin_ls
+    ◍ snyk
+    ◍ snyk-ls snyk_ls
+    ◍ solang
+    ◍ solang-llvm
+    ◍ solargraph
+    ◍ solhint
+    ◍ solidity solc
+    ◍ solidity-ls solidity
+    ◍ some-sass-language-server somesass_ls
+    ◍ sonarlint-language-server
+    ◍ sorbet
+    ◍ sourcery
+    ◍ spectral-language-server spectral
+    ◍ sphinx-lint
+    ◍ spyglassmc-language-server spyglassmc_language_server
+    ◍ sql-formatter
+    ◍ sqlfluff
+    ◍ sqlfmt
+    ◍ sqlls
+    ◍ sqls
+    ◍ sqruff
+    ◍ standardjs
+    ◍ standardrb
+    ◍ starlark-rust starlark_rust
+    ◍ starpls
+    ◍ staticcheck
+    ◍ steep
+    ◍ stimulus-language-server stimulus_ls
+    ◍ stree
+    ◍ stylelint
+    ◍ stylelint-lsp stylelint_lsp
+    ◍ superhtml
+    ◍ svelte-language-server svelte
+    ◍ svlangserver
+    ◍ svls
+    ◍ swift-mesonlsp swift_mesonls deprecated
+    ◍ swiftlint
+    ◍ systemd-language-server systemd_ls
+    ◍ systemdlint
+    ◍ tabby-agent
+    ◍ tailwindcss-language-server tailwindcss
+    ◍ taplo
+    ◍ teal-language-server teal_ls
+    ◍ tectonic
+    ◍ templ
+    ◍ termux-language-server
+    ◍ terraform
+    ◍ tex-fmt
+    ◍ texlab
+    ◍ textlint
+    ◍ textlsp
+    ◍ tflint
+    ◍ tfsec
+    ◍ thriftls
+    ◍ tilt
+    ◍ tinymist
+    ◍ tlint
+    ◍ tofu-ls tofu_ls
+    ◍ tombi
+    ◍ tree-sitter-cli
+    ◍ trivy
+    ◍ trufflehog
+    ◍ ts-standard
+    ◍ ts_query_ls
+    ◍ tsp-server tsp_server
+    ◍ turtle-language-server
+    ◍ twig-cs-fixer
+    ◍ twigcs
+    ◍ twiggy-language-server twiggy_language_server
+    ◍ ty
+    ◍ typos
+    ◍ typos-lsp typos_lsp
+    ◍ typst-lsp deprecated
+    ◍ typstfmt deprecated
+    ◍ typstyle
+    ◍ unocss-language-server unocss
+    ◍ usort
+    ◍ uv
+    ◍ v-analyzer v_analyzer
+    ◍ vacuum
+    ◍ vala-language-server vala_ls
+    ◍ vale
+    ◍ vale-ls vale_ls
+    ◍ vectorcode vectorcode_server
+    ◍ verible
+    ◍ veryl-ls veryl_ls
+    ◍ vetur-vls vuels
+    ◍ vhdl-style-guide
+    ◍ vim-language-server vimls
+    ◍ vint
+    ◍ visualforce-language-server visualforce_ls
+    ◍ vls
+    ◍ vscode-java-decompiler
+    ◍ vscode-java-dependency
+    ◍ vscode-solidity-server solidity_ls
+    ◍ vscode-spring-boot-tools
+    ◍ vsg
+    ◍ vtsls
+    ◍ vue-language-server vue_ls
+    ◍ vulture
+    ◍ wasm-language-tools
+    ◍ wgsl-analyzer wgsl_analyzer
+    ◍ wing
+    ◍ woke
+    ◍ write-good
+    ◍ xcbeautify
+    ◍ xmlformatter
+    ◍ xo deprecated
+    ◍ yamlfix
+    ◍ yamlfmt
+    ◍ yamllint
+    ◍ yapf
+    ◍ yls-yara
+    ◍ yq
+    ◍ zeek-language-server
+    ◍ zk
+    ◍ zls
+    ◍ zprint
+    ◍ zprint-clj
+    ◍ zuban
+

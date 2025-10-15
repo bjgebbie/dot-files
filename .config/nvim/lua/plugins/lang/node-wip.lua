@@ -1,7 +1,7 @@
 return {
 	{
 		"mfussenegger/nvim-dap",
-		version = "^0.10.0",
+		optional = true,
 		config = function()
 			local dap = require("dap")
 			local mason_path = vim.fn.stdpath("data") .. "/mason"

@@ -43,7 +43,6 @@ return {
 			local null_ls = require("null-ls")
 
 			local setup = {
-				-- you can reuse a shared lspconfig on_attach callback here
 				on_attach = function(client, bufnr)
 					if client.supports_method("textDocument/formatting") then
 						vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })

@@ -1,38 +1,5 @@
 return {
 	{
-		"williamboman/mason-lspconfig.nvim",
-		optional = true,
-		dependencies = {
-			"neovim/nvim-lspconfig",
-			"hrsh7th/cmp-nvim-lsp",
-			"williamboman/mason.nvim",
-		},
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = {
-					"jdtls",
-				},
-			})
-			require("cmp_nvim_lsp").default_capabilities()
-		end,
-	},
-	{
-		"jay-babu/mason-nvim-dap.nvim",
-		optional = true,
-		dependencies = {
-			"williamboman/mason.nvim",
-			"mfussenegger/nvim-dap",
-		},
-		config = function()
-			require("mason-nvim-dap").setup({
-				ensure_installed = {
-					"javadbg",
-				},
-				automatic_installation = true,
-			})
-		end,
-	},
-	{
 		"mfussenegger/nvim-dap",
 		optional = true,
 		config = function()
@@ -53,6 +20,8 @@ return {
 		ft = "java",
 		dependencies = {
 			"mfussenegger/nvim-dap",
+			"williamboman/mason.nvim",
+			"jay-babu/mason-nvim-dap.nvim",
 		},
 		config = function()
 			local home = os.getenv("HOME")
@@ -113,7 +82,10 @@ return {
 					},
 				},
 			}
-			require("jdtls").start_or_attach(config)
+			local jdtls = require("jdtls")
+			-- jdtls.test_class()
+			-- jdtls.test_nearest_method()
+			jdtls.start_or_attach(config)
 		end,
 	},
 }

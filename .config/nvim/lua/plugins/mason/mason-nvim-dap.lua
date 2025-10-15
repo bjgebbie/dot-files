@@ -9,10 +9,9 @@ return {
 	config = function()
 		require("mason-nvim-dap").setup({
 			ensure_installed = {
+				"javadbg",
 				"js",
-				-- "java",
 			},
-			automatic_installation = true,
 		})
 	end,
 }

@@ -36,6 +36,23 @@ return {
 			local jdtls_config_path = jdtls_path .. "/config_linux" -- Change per OS
 			local jdtls_launcher = jdtls_path .. "/plugins/org.eclipse.equinox.launcher_1.7.0.v20250519-0528.jar"
 
+			local bundles = {
+				java_debug_adapter_path .. "/extension/server/com.microsoft.java.debug.plugin-0.53.2.jar",
+			}
+
+			local java_test_bundles =
+				vim.split(vim.fn.glob(packages_path .. "/java-test/extension/server/*.jar", 1), "\n")
+			local excluded = {
+				"com.microsoft.java.test.runner-jar-with-dependencies.jar",
+				"jacocoagent.jar",
+			}
+			for _, java_test_jar in ipairs(java_test_bundles) do
+				local fname = vim.fn.fnamemodify(java_test_jar, ":t")
+				if not vim.tbl_contains(excluded, fname) then
+					table.insert(bundles, java_test_jar)
+				end
+			end
+
 			local config = {
 				name = "jdtls",
 				cmd = {
@@ -77,9 +94,7 @@ return {
 					},
 				},
 				init_options = {
-					bundles = {
-						java_debug_adapter_path .. "/extension/server/com.microsoft.java.debug.plugin-0.53.2.jar",
-					},
+					bundles = bundles,
 				},
 			}
 			local jdtls = require("jdtls")

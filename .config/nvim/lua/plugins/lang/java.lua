@@ -23,6 +23,18 @@ return {
 			"williamboman/mason.nvim",
 			"jay-babu/mason-nvim-dap.nvim",
 		},
+		keys = {
+			{
+				"<leader>dtm",
+				":lua require('jdtls').test_nearest_method()<CR>",
+				desc = "Run Nearest Method",
+			},
+			{
+				"<leader>dtc",
+				":lua require('jdtls').test_nearest_method()<CR>",
+				desc = "Run Class",
+			},
+		},
 		config = function()
 			local home = os.getenv("HOME")
 			local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")

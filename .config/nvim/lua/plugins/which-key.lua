@@ -6,6 +6,9 @@ return {
 	plugins = {
 		registers = true,
 	},
+	opts = {
+		preset = "helix",
+	},
 	keys = {
 		{
 			"<leader>?",
@@ -15,7 +18,15 @@ return {
 			desc = "Buffer Local Keymaps (which-key)",
 		},
 	},
-	opts = {
-		preset = "helix",
-	},
+	config = function(_, opts)
+		local which_key = require("which-key")
+		which_key.add({
+			{ "<leader>d", group = " Debug Keys" },
+			{ "<leader>c", group = " Code Keys" },
+			{ "<leader>l", group = " LSP Keys" },
+			{ "<leader>f", group = " Telescope Keys" },
+			{ "<leader>g", group = " Global Keys" },
+		})
+		which_key.setup(opts)
+	end,
 }

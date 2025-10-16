@@ -11,6 +11,7 @@ return {
 			ensure_installed = {
 				"javadbg",
 				"js",
+				-- "javatest", -- This doesn't work
 			},
 		})
 	end,

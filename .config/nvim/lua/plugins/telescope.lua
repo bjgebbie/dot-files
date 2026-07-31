@@ -6,6 +6,16 @@ return {
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	},
 	opts = {
+		defaults = {
+			layout_config = {
+				preview_cutoff = 0,
+				vertical = {
+					prompt_position = "top",
+                    mirror = true
+				},
+			},
+			layout_strategy = "vertical",
+		},
 		pickers = {
 			find_files = {
 				hidden = true,

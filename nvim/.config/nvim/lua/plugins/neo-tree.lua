@@ -15,6 +15,10 @@ return {
 			hijack_netrw_behavior = "open_default",
 		},
 		window = {
+			position = "float",
+			popup = {
+				border = "rounded",
+			},
 			mappings = {
 				["l"] = "open",
 				["h"] = "close_node",

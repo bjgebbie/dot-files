@@ -1,7 +1,13 @@
 return {
 	"rebelot/kanagawa.nvim",
-	priority = 1000, -- make sure to load this before all the other start plugins
+	priority = 1000,
 	config = function()
-		require("kanagawa").load("wave")
+		local theme = require("kanagawa")
+
+		theme.setup({
+			transparent = true,
+		})
+
+		theme.load("wave")
 	end,
 }

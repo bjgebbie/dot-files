@@ -6,7 +6,10 @@ return {
 		"neovim/nvim-lspconfig",
 	},
 	opts = {
-		ensure_installed = { "lua_ls", "gopls" },
+		ensure_installed = {
+			"lua_ls",
+			"gopls",
+		},
 	},
 	keys = {
 		{
@@ -31,7 +34,7 @@ return {
 		},
 		{
 			"<leader>lr",
-			"<cmd>lua vim.lsp.buf.references()<cr>",
+			"<cmd>lua require('telescope.builtin').lsp_references()<cr>",
 			desc = "Goto References",
 		},
 	},

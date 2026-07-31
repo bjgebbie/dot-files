@@ -7,11 +7,6 @@ return {
 		nes = { enabled = false },
 		cli = {
 			win = {
-				-- layout = "float",
-				-- float = {
-				-- 	height = 0.9,
-				-- 	width = 0.9,
-				-- },
 				keys = {
 					nav_left = { "<A-h>", "nav_left", expr = true, desc = "navigate to the left window" },
 					nav_down = { "<A-j>", "nav_down", expr = true, desc = "navigate to the below window" },
@@ -24,12 +19,24 @@ return {
 	keys = {
 		{
 			"<leader>sk",
-			"<cmd>lua require('sidekick.cli').toggle({name='copilot',focus=true})<CR>",
+			function()
+				require("sidekick.cli").toggle({ name = "copilot", focus = true })
+			end,
 			desc = "Toggle Sidekick",
 		},
 		{
-			"<Esc>",
-			"<cmd>lua require('sidekick.cli').close()<CR>",
+			"<leader>ss",
+			function()
+				require("sidekick.cli").send({ msg = "{selection}" })
+			end,
+			mode = { "x" },
+			desc = "Send Visual Selection",
+		},
+		{
+			"<leader>sq",
+			function()
+				require("sidekick.cli").close()
+			end,
 			desc = "Close Sidekick",
 		},
 	},

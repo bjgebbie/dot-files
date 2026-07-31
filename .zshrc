@@ -23,7 +23,7 @@ fuzkill() {
 
 alias pi="sudo pacman -Sy"
 alias vim="nvim"
-alias ls="eza -1halrb --icons --group-directories-first --total-size"
+alias ls="eza -1halrb --icons --group-directories-first"
 
 bindkey -v
 
